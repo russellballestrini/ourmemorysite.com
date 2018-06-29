@@ -1,0 +1,218 @@
+body {
+  margin: 0;
+  font-family: 'Vollkorn', serif;
+  font-size: 16px;
+  font-size: 1rem;
+  -moz-osx-font-smoothing: grayscale;
+  color: #1c1915;
+  /* background-color: #1c1915; */
+  /* background-color: #2F2C27; */
+  background-color: #383530;
+}
+
+/* newspaper wrapper start */
+.newspaper {
+  display: grid;
+  grid-column-gap: 1em;
+  grid-row-gap: 0.5em;
+
+  max-width: 64em;
+  grid-template-areas:
+    "topheader"
+    "articles"
+    "guestbook";
+}
+
+.newspaper-topheader {
+  grid-area: topheader;
+}
+
+.newspaper-articles {
+  grid-area: articles;
+}
+
+.guestbook{
+  grid-area: guestbook;
+}
+/* newspaper wrapper end */
+
+/* newspaper-toparticle wrapper start */
+.newspaper-toparticle {
+  display: grid;
+  grid-column-gap: 1em;
+  grid-row-gap: 0;
+  grid-template-areas:
+    "artheader"
+    "artimage"
+    "arttext";
+}
+
+.newspaper-toparticle h1 {
+  grid-area: artheader;
+}
+
+.newspaper-toparticle-image {
+  grid-area: artimage;
+}
+
+.newspaper-toparticle-text {
+  grid-area: arttext;
+}
+/* newspaper-toparticle wrapper end */
+
+.newspaper {
+    background-color: #fff8ee;
+    margin: 1em auto;
+    border-radius: .3rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #1c1915;
+  margin: 0.5em auto;
+}
+
+.hr-double-top, .hr-double-bottom {
+  border-top: 0.1875em solid #1c1915;
+  border-bottom: 1px solid #1c1915;
+  height: 0.125em;
+  margin: 0.5em auto;
+}
+
+.hr-double-bottom {
+  border-top: 1px solid #1c1915;
+  border-bottom: 0.1875em solid #1c1915;
+}
+
+.newspaper-frontpage-obituaries h1 {
+  font-size: 1.5rem;
+  color: #fff8ee;
+  background-color: #1c1915;
+  margin-bottom: 8px;
+  padding-left: 8px;
+  padding-top: 4px;
+}
+
+.newspaper-articles {
+  border: 1px solid #1c1915;
+  padding: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.guestbook {
+}
+
+.newspaper-articles-ingress {
+  font-weight: 700;
+}
+
+.newspaper-topheader h1 {
+  font-size: 1.5rem;
+  margin: .5rem;
+  text-align: center;
+}
+
+.newspaper-toparticle h1 {
+  font-family: "Anton", sans-serif;
+  font-weight: normal;
+  font-size: 2.0rem;
+  margin: 0;
+
+  display: block;
+  text-align: center;
+}
+
+.guestbook-header {
+  font-size: 1rem;
+  font-family: 'Vollkorn', serif;
+  text-align: center;
+  margin: 0px;
+  padding: 16px;
+  color: #fff8ee;
+  background-color: #1c1915;
+}
+
+.helper-verticaltext {
+  display: inline-block;
+  -webkit-transform: rotate(-90deg);
+     -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+       -o-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.newspaper-toparticle
+.helper-verticaltext {
+  font-size: 1.8rem;
+  width: 1.8rem;
+}
+
+.newspaper-toparticle-aside .newspaper-articles-ingress {
+  text-align: center;
+  /*margin-right: 8px;*/
+}
+
+.newspaper-toparticle-image img {
+  width: 100%;
+}
+
+.newspaper-toparticle-image-caption {
+  text-align: center;
+  font-style: italic;
+}
+
+.newspaper-toparticle-image-service {
+  text-align: center;
+}
+
+
+/** Utility Classes **/
+
+.no-top-margin {
+  margin-top: 0px;
+}
+
+.no-bottom-margin {
+  margin-bottom: 0px;
+}
+
+span.avoid-wrap {
+    display: inline-block;
+}
+
+@media (max-width: 34em) {
+    .hidden-on-phone {
+      display: none;
+    }
+}
+
+@media (min-width: 34em) {
+  .newspaper-toparticle {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "artheader  artheader"
+      "arttext    artimage";
+  }
+
+  .newspaper-frontpage-obituaries {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .newspaper-toparticle h1 {
+    font-size: 6.0rem;
+  }
+  .newspaper-topheader h1 {
+    font-size: 3.5rem;
+  }
+  .guestbook-header {
+    font-size: 2.8rem;
+  }
+  .newspaper-topheader {
+    padding-top: 0.5em;
+  }
+
+}

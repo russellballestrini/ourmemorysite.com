@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>On Our Memory Site</title>
+  <meta charset="utf-8"/>
+  <!-- this makes mobile pretty...  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#D40000">
+
+  <!--Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Kreon:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/css/layout.css">
+</head>
+<body>
+
+<!-- using a `main` tag broke ie8, using `div` until ie8 is "gone." -->
+<div role="main" class="newspaper">
+
+  <header class="newspaper-topheader">
+    <hr class="hr-double-top"/>
+    <h1>Our Memory Site</h1>
+    <hr class="hr-double-bottom"/>
+  </header>
+
+  <section class="newspaper-articles">
+    <article class="newspaper-toparticle">
+
+      <h1 class="newspaper-toparticle">
+        <span class="hidden-on-phone helper-verticaltext">Obituary</span>
+        Richard <span class="avoid-wrap">James Grote</span>
+      </h1>
+
+      <section class="newspaper-toparticle-text">
+        <p class="newspaper-articles-ingress no-top-margin">
+        Richard James Grote passed away on June 15, 2018 in Myrtle Beach, South Carolina.
+        </p>
+
+        <p>
+        He was known by loved ones as:
+        "Dick Grote", "Dad", "Grandpa", "Papa", and "Great Grandpa".
+        </p>
+
+        <p>
+        Born on May 25, 1946, in Middletown, Connecticut, he was the son of the late Francis and Constance (Smith) Grote. He grew up in Chester, Connecticut.
+        </p>
+
+        <p>
+        In addition to his parents, he was predeceased in 2000 by his late wife, Lynda (Loucks) Grote, whom he shared 34 years of marriage and 4 children.
+        </p>
+
+        <p>
+        Known by the racing community as "Dick Grote", he had a passion for racing from a young age. He became a Nascar officiant at 21 years old and was Chief Steward at Stafford Motor Speedway for many years. He was also Chief Steward at The Waterford Speedbowl for a time. He loved classic cars and playing softball.
+        </p>
+
+        <p>
+        He worked at Pratt and Whitney for 34 years.
+        </p>
+
+        <p>
+        Richard married Wanda (DuBois) Grote in 2004. They retired to Myrtle Beach in 2014 where he enjoyed visits from friends and family and soaking in the sunshine with his wife and 2 border collies, Sonny and Breezy.
+        </p>
+
+        <p>
+        He will be and forever loved and missed by his wife and best friend, Wanda (DuBois) Grote; a brother, William Grote; a sister, Barbara Earles; his sons: David Grote (and wife LaWanna); Gary Grote (and wife Sarah), and Timothy Grote; his daughters: Karen (Grote) Powers (and husband Brian), and Jill (Lindsey) Denninger; 16 grandchildren: Jennifer (and husband Russell), Bryan (and wife Cassandre), Haley,  Elizabeth (and husband Jason), Jessica, Nathan, Melissa, Samantha, Breiann, Katelyn, Aaron, Dominick, Jamie, Cianna, Adrianna, and Michael; 3 great-grandchildren: RJ, Carter, and Eliana; his mother-in-law, Gertrude R. DuBois; and many additional family members and life-long friends.
+        </p>
+
+        <p class="newspaper-toparticle-image-service">
+        Services will be private.
+        </p>
+
+      </section>
+
+      <section class="newspaper-toparticle-image">
+        <img src="richard-james-grote.png">
+        <p class="newspaper-toparticle-image-caption">
+        Richard James Grote (Dick Grote)
+        </p>
+      </section>
+
+    </article>
+  </section>
+
+  <section class="guestbook">
+
+      <h1 class="guestbook-header">
+          <span class="avoid-wrap">Please share memories</span>
+          <span class="avoid-wrap">in our Guestbook</span>
+      </h1>
+
+  <!-- Remarkbox - Your readers want to communicate with you -->
+  <div id="remarkbox-div">
+    <noscript>
+      <iframe id=remarkbox-iframe src="https://my.remarkbox.com/embed?nojs=true" style="height:600px;width:100%;border:none!important" tabindex=0></iframe>
+    </noscript>
+  </div>
+  <script src="https://my.remarkbox.com/static/js/iframe-resizer/iframeResizer.min.js"></script>
+  <script>
+    var rb_owner_key = "80d5bba6-7bf0-11e8-a7d8-040140774501";
+    var thread_uri = window.location.href;
+    var thread_fragment = window.location.hash;
+    function create_remarkbox_iframe() {
+      var src = "https://my.remarkbox.com/embed?rb_owner_key=" + rb_owner_key + "&thread_uri=" + thread_uri;
+      var ifrm = document.createElement("iframe");
+      ifrm.setAttribute("id", "remarkbox-iframe");
+      ifrm.setAttribute("scrolling", "no");
+      ifrm.setAttribute("src", src);
+      ifrm.setAttribute("frameborder", "0");
+      ifrm.setAttribute("tabindex", "0");
+      ifrm.setAttribute("title", "Remarkbox");
+      ifrm.style.width = "100%";
+      document.getElementById("remarkbox-div").appendChild(ifrm);
+    }
+    create_remarkbox_iframe();
+    iFrameResize(
+      {
+        checkOrigin: ["https://my.remarkbox.com"],
+        inPageLinks: true,
+        initCallback: function(e) {e.iFrameResizer.moveToAnchor(thread_fragment)}
+      },
+      document.getElementById("remarkbox-iframe")
+    );
+  </script>
+
+    <hr class="hr-double-bottom"/>
+  </section>
+
+</div>
+</body>
+</html>

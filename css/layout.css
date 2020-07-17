@@ -20,6 +20,7 @@ body {
   grid-template-areas:
     "topheader"
     "articles"
+    "postmatter"
     "guestbook";
 }
 
@@ -29,6 +30,10 @@ body {
 
 .newspaper-articles {
   grid-area: articles;
+}
+
+.postmatter {
+  grid-area: postmatter;
 }
 
 .guestbook{
@@ -101,6 +106,11 @@ hr {
   padding: 2px;
   padding-left: 8px;
   padding-right: 8px;
+}
+
+.postmatter {
+  text-align: center;
+  padding: 1em;
 }
 
 .guestbook {

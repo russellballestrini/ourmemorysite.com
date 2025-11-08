@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>On Our Memory Site</title>
+  <meta charset="utf-8"/>
+  <!-- this makes mobile pretty...  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#D40000">
+
+  <!--Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Kreon:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/css/layout.css">
+</head>
+<body>
+
+<!-- using a `main` tag broke ie8, using `div` until ie8 is "gone." -->
+<div role="main" class="newspaper">
+
+  <header class="newspaper-topheader">
+    <hr class="hr-double-top"/>
+    <h1>Our Memory Site</h1>
+    <hr class="hr-double-bottom"/>
+  </header>
+
+  <section class="newspaper-articles">
+    <article class="newspaper-toparticle">
+
+      <h1 class="newspaper-toparticle">
+        <span class="hidden-on-phone helper-verticaltext">Obituary</span>
+        <span class="avoid-wrap">Casey-Lee Ballestrini</span>
+      </h1>
+
+      <section class="newspaper-toparticle-text">
+        <p class="newspaper-articles-ingress no-top-margin">
+        Casey-Lee Ballestrini, 36, of East Lyme, passed away on March 16, 2021.
+        </p>
+
+        <p>
+        Born in New London on March 13, 1985, Casey-Lee was a beloved son, brother, father, and partner who touched the lives of many in the East Lyme community.
+        </p>
+
+        <p>
+        Casey-Lee leaves behind his loving parents, Kim Ballestrini and Vinton Augustus Ballestrini; his brother, Jason-Lee Ballestrini; his devoted partner, Tom Longo; and his cherished son, Coda Vinton Riley. He is also survived by DJ Riley, along with many aunts, uncles, and cousins.
+        </p>
+
+        <p class="newspaper-toparticle-image-service">
+        Services were held at Thomas L. Neilan & Sons Funeral Homes.
+        </p>
+
+      </section>
+
+    </article>
+  </section>
+
+  <section class="guestbook">
+
+      <h1 class="guestbook-header">
+          <span class="avoid-wrap">Share kind memories</span>
+          <span class="avoid-wrap">in our Guestbook</span>
+      </h1>
+
+      <br/>
+
+  <!-- Remarkbox - Your readers want to communicate with you -->
+  <div id="remarkbox-div">
+    <noscript>
+      <iframe id=remarkbox-iframe src="https://my.remarkbox.com/embed?nojs=true" style="height:600px;width:100%;border:none!important" tabindex=0></iframe>
+    </noscript>
+  </div>
+  <script src="https://my.remarkbox.com/static/js/iframe-resizer/iframeResizer.min.js"></script>
+  <script>
+    var rb_owner_key = "80d5bba6-7bf0-11e8-a7d8-040140774501";
+    var thread_uri = window.location.href;
+    var thread_fragment = window.location.hash;
+    function create_remarkbox_iframe() {
+      var src = "https://my.remarkbox.com/embed?rb_owner_key=" + rb_owner_key + "&thread_uri=" + thread_uri;
+      var ifrm = document.createElement("iframe");
+      ifrm.setAttribute("id", "remarkbox-iframe");
+      ifrm.setAttribute("scrolling", "no");
+      ifrm.setAttribute("src", src);
+      ifrm.setAttribute("frameborder", "0");
+      ifrm.setAttribute("tabindex", "0");
+      ifrm.setAttribute("title", "Remarkbox");
+      ifrm.style.width = "100%";
+      document.getElementById("remarkbox-div").appendChild(ifrm);
+    }
+    create_remarkbox_iframe();
+    iFrameResize(
+      {
+        checkOrigin: ["https://my.remarkbox.com"],
+        inPageLinks: true,
+        initCallback: function(e) {e.iFrameResizer.moveToAnchor(thread_fragment)}
+      },
+      document.getElementById("remarkbox-iframe")
+    );
+  </script>
+
+    <hr class="hr-double-bottom"/>
+  </section>
+
+</div>
+</body>
+</html>

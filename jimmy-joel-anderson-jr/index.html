@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>On Our Memory Site</title>
+  <meta charset="utf-8"/>
+  <!-- this makes mobile pretty...  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#D40000">
+
+  <!--Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Kreon:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/css/layout.css">
+</head>
+<body>
+
+<!-- using a `main` tag broke ie8, using `div` until ie8 is "gone." -->
+<div role="main" class="newspaper">
+
+  <header class="newspaper-topheader">
+    <hr class="hr-double-top"/>
+    <h1>Our Memory Site</h1>
+    <hr class="hr-double-bottom"/>
+  </header>
+
+  <section class="newspaper-articles">
+    <article class="newspaper-toparticle">
+
+      <h1 class="newspaper-toparticle">
+        <span class="hidden-on-phone helper-verticaltext">Obituary</span>
+        <span class="avoid-wrap">Jimmy Joel Anderson, Jr.</span>
+      </h1>
+
+      <section class="newspaper-toparticle-text">
+        <p class="newspaper-articles-ingress no-top-margin">
+        Jimmy Joel Anderson, Jr., 30, of Waterford, died unexpectedly on Saturday, September 12, 2015.
+        </p>
+
+        <p>
+        Born in New London on March 4, 1985, Jimmy was the son of Jimmy Anderson and Robin Lanphear Anderson. He was a graduate of Waterford High School and had been employed as a supervisor for Cross Sound Ferry, where he was a valued member of the team.
+        </p>
+
+        <p>
+        Jimmy's presence brought joy and laughter to those around him. He was a devoted father, loving son, and caring brother who cherished time spent with his family and friends.
+        </p>
+
+        <p>
+        He is survived by his parents, Jimmy and Robin Anderson; his son, Logan Anderson; his daughter, Lillian Rayne Anderson; and his sister, Megan Anderson. He also leaves behind many loving aunts, uncles, nieces, nephews, cousins, and friends who will forever hold him in their hearts.
+        </p>
+
+        <p class="newspaper-toparticle-image-service">
+        A memorial service was held on Saturday, September 19, 2015 at 1:00 p.m. at Thomas L. Neilan & Sons Funeral Home, 12 Ocean Ave., New London.
+        </p>
+
+      </section>
+
+    </article>
+  </section>
+
+  <section class="guestbook">
+
+      <h1 class="guestbook-header">
+          <span class="avoid-wrap">Share kind memories</span>
+          <span class="avoid-wrap">in our Guestbook</span>
+      </h1>
+
+      <br/>
+
+  <!-- Remarkbox - Your readers want to communicate with you -->
+  <div id="remarkbox-div">
+    <noscript>
+      <iframe id=remarkbox-iframe src="https://my.remarkbox.com/embed?nojs=true" style="height:600px;width:100%;border:none!important" tabindex=0></iframe>
+    </noscript>
+  </div>
+  <script src="https://my.remarkbox.com/static/js/iframe-resizer/iframeResizer.min.js"></script>
+  <script>
+    var rb_owner_key = "80d5bba6-7bf0-11e8-a7d8-040140774501";
+    var thread_uri = window.location.href;
+    var thread_fragment = window.location.hash;
+    function create_remarkbox_iframe() {
+      var src = "https://my.remarkbox.com/embed?rb_owner_key=" + rb_owner_key + "&thread_uri=" + thread_uri;
+      var ifrm = document.createElement("iframe");
+      ifrm.setAttribute("id", "remarkbox-iframe");
+      ifrm.setAttribute("scrolling", "no");
+      ifrm.setAttribute("src", src);
+      ifrm.setAttribute("frameborder", "0");
+      ifrm.setAttribute("tabindex", "0");
+      ifrm.setAttribute("title", "Remarkbox");
+      ifrm.style.width = "100%";
+      document.getElementById("remarkbox-div").appendChild(ifrm);
+    }
+    create_remarkbox_iframe();
+    iFrameResize(
+      {
+        checkOrigin: ["https://my.remarkbox.com"],
+        inPageLinks: true,
+        initCallback: function(e) {e.iFrameResizer.moveToAnchor(thread_fragment)}
+      },
+      document.getElementById("remarkbox-iframe")
+    );
+  </script>
+
+    <hr class="hr-double-bottom"/>
+  </section>
+
+</div>
+</body>
+</html>

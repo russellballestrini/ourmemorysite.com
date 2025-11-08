@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>On Our Memory Site</title>
+  <meta charset="utf-8"/>
+  <!-- this makes mobile pretty...  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#D40000">
+
+  <!--Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Kreon:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/css/layout.css">
+</head>
+<body>
+
+<!-- using a `main` tag broke ie8, using `div` until ie8 is "gone." -->
+<div role="main" class="newspaper">
+
+  <header class="newspaper-topheader">
+    <hr class="hr-double-top"/>
+    <h1>Our Memory Site</h1>
+    <hr class="hr-double-bottom"/>
+  </header>
+
+  <section class="newspaper-articles">
+    <article class="newspaper-toparticle">
+
+      <h1 class="newspaper-toparticle">
+        <span class="hidden-on-phone helper-verticaltext">Obituary</span>
+        <span class="avoid-wrap">Barbara McBreairty</span>
+      </h1>
+
+      <section class="newspaper-toparticle-text">
+        <p class="newspaper-articles-ingress no-top-margin">
+        Barbara McBreairty of Connecticut passed away in 2024.
+        </p>
+
+        <p>
+        Barbara was a cherished daughter of the late Joanne (Seneschal) Marandino and John Rocco Marandino. Born and raised in the Bristol-Southington area of Connecticut, she was part of a close-knit family who shared many precious memories together.
+        </p>
+
+        <p>
+        Barbara was a devoted wife to Marshall McBreairty, with whom she shared a loving partnership. She was a caring sister to her four siblings: Carol Ballestrini and her husband Rosario, Susan Marandino, Theresa McBreairty and her husband Rory, and Catherine Marandino. Together, the sisters were part of a large, loving family that included eleven nieces and nephews and nine great-nieces and great-nephews.
+        </p>
+
+        <p>
+        Barbara was predeceased by her beloved mother, Joanne (Seneschal) Marandino, who passed away in December 2019, and her father, John Rocco Marandino, who passed away in 1992. She also joins her maternal aunts and uncles who have gone before her.
+        </p>
+
+        <p>
+        She is survived by her loving husband Marshall McBreairty; her sisters Carol, Susan, Theresa, and Catherine; her maternal aunts Jeannette Fortin, Theresa Flanagan, and Victoria Jones; along with many nieces, nephews, cousins, and friends who will miss her deeply.
+        </p>
+
+        <p class="newspaper-toparticle-image-service">
+        [Service information to be added]
+        </p>
+
+      </section>
+
+    </article>
+  </section>
+
+  <section class="guestbook">
+
+      <h1 class="guestbook-header">
+          <span class="avoid-wrap">Share kind memories</span>
+          <span class="avoid-wrap">in our Guestbook</span>
+      </h1>
+
+      <br/>
+
+  <!-- Remarkbox - Your readers want to communicate with you -->
+  <div id="remarkbox-div">
+    <noscript>
+      <iframe id=remarkbox-iframe src="https://my.remarkbox.com/embed?nojs=true" style="height:600px;width:100%;border:none!important" tabindex=0></iframe>
+    </noscript>
+  </div>
+  <script src="https://my.remarkbox.com/static/js/iframe-resizer/iframeResizer.min.js"></script>
+  <script>
+    var rb_owner_key = "80d5bba6-7bf0-11e8-a7d8-040140774501";
+    var thread_uri = window.location.href;
+    var thread_fragment = window.location.hash;
+    function create_remarkbox_iframe() {
+      var src = "https://my.remarkbox.com/embed?rb_owner_key=" + rb_owner_key + "&thread_uri=" + thread_uri;
+      var ifrm = document.createElement("iframe");
+      ifrm.setAttribute("id", "remarkbox-iframe");
+      ifrm.setAttribute("scrolling", "no");
+      ifrm.setAttribute("src", src);
+      ifrm.setAttribute("frameborder", "0");
+      ifrm.setAttribute("tabindex", "0");
+      ifrm.setAttribute("title", "Remarkbox");
+      ifrm.style.width = "100%";
+      document.getElementById("remarkbox-div").appendChild(ifrm);
+    }
+    create_remarkbox_iframe();
+    iFrameResize(
+      {
+        checkOrigin: ["https://my.remarkbox.com"],
+        inPageLinks: true,
+        initCallback: function(e) {e.iFrameResizer.moveToAnchor(thread_fragment)}
+      },
+      document.getElementById("remarkbox-iframe")
+    );
+  </script>
+
+    <hr class="hr-double-bottom"/>
+  </section>
+
+</div>
+</body>
+</html>
